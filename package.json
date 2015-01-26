@@ -1,0 +1,18 @@
+{
+  "name": "node-crypto-bench",
+  "version": "0.0.1",
+  "description": "Node Crypto Bench",
+  "main": "./index.js",
+  "dependencies": {
+    "optimist": "~0.6.0"
+  },
+  "author": "kitakitabauer <kitakita.d.kitakita@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/kitakitabauer/node-crypto-bench/issues"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "engine": {
+      "node": ">=0.8"
+  }
+}
