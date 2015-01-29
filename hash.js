@@ -1,26 +1,5 @@
 var crypto = require('crypto'),
-    argv = require('./options').parser
-    // argv = require('optimist')
-        // .usage('Usage: -a [algorithm] -e [encoding] -d [data] -l [loop] -v [verbose]')
-        // .options('a', {
-            // alias: 'algorithm'
-        // })
-        // .options('e', {
-            // alias: 'encoding'
-        // })
-        // .options('d', {
-            // alias: 'data'
-        // })
-        // .options('l', {
-            // alias: 'loop'
-        // })
-        // .options('v', {
-            // alias: 'verbose',
-            // default: false
-        // })
-        // .boolean(['v'])
-        // .argv
-    ;
+    argv = require('./options').parser;
 
 var debug = argv.v ? console.log : function() {};
 
@@ -54,16 +33,16 @@ function toHash(algorithm, encoding, arg) {
     debug(sum.digest(encoding));
 }
 
-function createCipher(algorithm, arg) {
-    var cipher = crypto.createCipher(algorithm, arg.toString());
-    cipher.update(arg, 'utf8', 'hex');
-    var text = cipher.final('hex');
+// function createCipher(algorithm, arg) {
+    // var cipher = crypto.createCipher(algorithm, arg.toString());
+    // cipher.update(arg, 'utf8', 'hex');
+    // var text = cipher.final('hex');
 
-    // 複合
-    var decipher = crypto.createDecipher(algorithm, arg);
-    decipher.update(text.toString(), 'hex', 'utf8');
-    var dec = decipher.final('utf8');
-}
+    // // 複合
+    // var decipher = crypto.createDecipher(algorithm, arg);
+    // decipher.update(text.toString(), 'hex', 'utf8');
+    // var dec = decipher.final('utf8');
+// }
 
 exports.execute = function() {
     console.time('time');
