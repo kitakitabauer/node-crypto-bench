@@ -15,5 +15,5 @@ $ npm install
 ## Running
 
 ```
-$ node ./ -a [md5|sha1|sha256|sha512] -e [hex|binary|base64] -d data -l loop [-v]
+$ ./bin/hash -a [md5|sha1|sha256|sha512] -e [hex|binary|base64] -d data -l loop [-v]
 ```

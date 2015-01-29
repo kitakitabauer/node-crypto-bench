@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+var hash = require('../hash');
+hash.execute();
